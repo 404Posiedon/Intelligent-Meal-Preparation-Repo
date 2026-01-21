@@ -16,8 +16,8 @@ namespace IntelligentMealPreparationAPI.Models
 
         // Navigation properties
         public Preference? Preference { get; set; }
-        public List<PantryItem> PantryItems { get; set; } = new();
-        public List<MealPlan> MealPlans { get; set; } = new();
+        public List<PantryItem> PantryItems { get; set; } = [];
+        public List<MealPlan> MealPlans { get; set; } = [];
 
     }
 }

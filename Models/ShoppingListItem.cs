@@ -7,7 +7,7 @@
         public decimal Quantity { get; set; }
         public FoodUnit Unit { get; set; } = FoodUnit.Grams;
         public FoodCategory Category { get; set; } = FoodCategory.Other;
-        public bool isCheckedOff { get; set; } = false;
+        public bool IsCheckedOff { get; set; } = false;
         public decimal? EstimatedCost { get; set; }
 
         // Foreign key

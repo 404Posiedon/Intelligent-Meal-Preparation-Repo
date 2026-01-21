@@ -13,7 +13,7 @@
 
         // Navigation properties
         public required User User { get; set; }
-        public ICollection<Meal> Meals { get; set; } = new List<Meal>();
+        public ICollection<Meal> Meals { get; set; } = [];
         public ShoppingList? ShoppingList { get; set; }
     }
     public enum MealPlanStatus

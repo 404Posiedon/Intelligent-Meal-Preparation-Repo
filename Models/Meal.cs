@@ -17,7 +17,7 @@
 
         // Navigation property
         public required MealPlan MealPlan { get; set; }
-        public ICollection<MealIngredient> Ingredients { get; set; } = new List<MealIngredient>();
+        public ICollection<MealIngredient> Ingredients { get; set; } = [];
 
     }
     public enum MealType

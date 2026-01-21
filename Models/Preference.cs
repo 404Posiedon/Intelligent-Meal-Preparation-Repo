@@ -17,8 +17,8 @@
 
         // Navigation property
         public required User User { get; set; }
-        public ICollection<DietaryRestriction> DietaryRestrictionsList { get; set; } = new List<DietaryRestriction>();
-        public ICollection<Allergies> AllergiesList { get; set; } = new List<Allergies>();
+        public ICollection<DietaryRestriction> DietaryRestrictionsList { get; set; } = [];
+        public ICollection<Allergies> AllergiesList { get; set; } = [];
     }
     // Enum for SkillLevel
     public enum SkillLevel

@@ -12,8 +12,8 @@
         public int MealPlanId { get; set; }
 
         // Navigation property
-        public required MealPlan MealPlan { get; set; } 
-        public ICollection<ShoppingListItem> Items { get; set; } = new List<ShoppingListItem>();
+        public required MealPlan MealPlan { get; set; }
+        public ICollection<ShoppingListItem> Items { get; set; } = [];
     }
     public enum ShoppingListStatus
     {
