@@ -1,4 +1,6 @@
-﻿namespace IntelligentMealPreparationAPI.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace IntelligentMealPreparationAPI.Models
 {
     public class PantryItem
     {
@@ -6,6 +8,8 @@
         public int Id { get; set; }
         public string Name { get; set; } = "";
         public FoodCategory Category { get; set; } = FoodCategory.Other;
+
+        [Column(TypeName = "decimal(18.2)")]
         public decimal Quantity { get; set; }
         public FoodUnit Unit { get; set; } = FoodUnit.Grams;
         public DateTime ExpirationDate { get; set; }

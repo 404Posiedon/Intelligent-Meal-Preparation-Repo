@@ -1,6 +1,16 @@
+using IntelligentMealPreparationAPI.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
+var ConnectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+                          ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+
+
+
 // Add services to the container.
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(ConnectionString));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
